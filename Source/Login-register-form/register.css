@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/Users/fendhi/Downloads/image 12.png') no-repeat center center;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.form-container {
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo {
+    position: absolute;
+    top: -100px;
+    left: -370px;
+    margin: 0;
+}
+
+.logo h1 {
+    font-size: 30px;
+    color: #333;
+}
+
+.logo span {
+    color: #e4007f;
+}
+
+form h2 {
+    text-align: center; /* Center the text */
+    margin-bottom: 10px; /* Adjust margin as needed */
+    color: #333;
+}
+
+form hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 10px auto; /* Center the border horizontally */
+    width: 80%; /* Adjust the width as needed */
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 15px; /* Increase padding */
+    margin: 15px 0; /* Increase margin */
+    border: 1px solid #030202;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 15px; /* Increase padding */
+    margin: 15px 0; /* Increase margin */
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #1abc9c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+form button:hover {
+    background-color: #16a085;
+}

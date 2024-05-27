@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi</title>
+    <link rel="stylesheet" href="css/informasi.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="pelayanan.html">Pelayanan</a></li>
+                <li><a href="formpendaftaran.html">Pendaftaran Online</a></li>
+                <li><a href="informasi.html" class="active">Informasi</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2 class="main-title">Informasi</h2>
+            <div class="antrian-info">
+                <div class="antrian">
+                    <h2>Antrian Anda</h2>
+                    <div class="antrian-box">
+                        <h1>A01</h1>
+                    </div>
+                </div>
+                <div class="info">
+                    <h2>Informasi</h2>
+                    <div class="info-detail">
+                        <p><strong>Nama :</strong> Fendhi Nur Maulam</p>
+                        <p><strong>No Medis :</strong> D20012111</p>
+                        <p><strong>Tanggal Lahir :</strong> 12-12-12</p>
+                        <p><strong>No Handphone :</strong> 0812345678</p>
+                        <p><strong>Alamat :</strong> Kecepit Rt90 Rw10</p>
+                        <p><strong>Poliklinik :</strong> THT</p>
+                        <p class="date"><strong>12-02-2035</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="lainnya">
+                <h2>Lainnya</h2>
+                <div class="lainnya-box" id="lainnya-box"></div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const lainnyaBox = document.getElementById('lainnya-box');
+        const messages = ["Message 1", "Message 2", "Message 3"];
+        let messageIndex = 0;
+
+        function changeMessage() {
+            messageIndex = (messageIndex + 1) % messages.length;
+            lainnyaBox.textContent = messages[messageIndex];
+        }
+
+        setInterval(changeMessage, 3000);
+    </script>
+</body>
+</html>

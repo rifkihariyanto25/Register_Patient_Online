@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background-color: #6fb5c9;
+    padding: 25px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(6, 6, 6);
+    font-weight: bold;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+  color: red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.main-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.antrian-info {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.antrian, .info, .lainnya {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 45%;
+}
+
+.lainnya {
+    width: 80%;
+    max-width: 1000px;
+}
+
+.antrian h2, .info h2, .lainnya h2 {
+    margin-bottom: 20px;
+}
+
+.antrian-box, .lainnya-box {
+    background-color: #6fb5c9;
+    padding: 50px 0;
+    border-radius: 10px;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.info-detail {
+    text-align: left;
+}
+
+.info-detail p {
+    margin: 10px 0;
+}
+
+.date {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+}

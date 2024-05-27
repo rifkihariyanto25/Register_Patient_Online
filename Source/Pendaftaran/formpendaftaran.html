@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendaftaran Online</title>
+    <link rel="stylesheet" href="formpendaftaran.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../Beranda/index.html">Beranda</a></li>
+          <li><a href="#pelayanan">Pelayanan</a></li>
+          <li>
+            <a href="pendaftaran_online.html" class="active"
+              >Pendaftaran Online</a
+            >
+          </li>
+          <li><a href="informasi.html">Informasi</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="form-section">
+          <h2>Pendaftaran Online</h2>
+          <form>
+            <div class="form-group">
+              <h3>Biodata</h3>
+              <label for="name">Nama</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Masukkan Nama Pendaftar"
+              />
+
+              <label for="rekam-medik">Nomor Rekam Medik</label>
+              <input
+                type="text"
+                id="rekam-medik"
+                name="rekam-medik"
+                placeholder="Masukkan No Rekam Medik"
+              />
+
+              <label for="dob">Tanggal Lahir</label>
+              <input type="date" id="dob" name="dob" class="date-input" />
+
+              <label for="phone">Nomor Handphone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Masukkan No Handphone"
+              />
+
+              <label for="address">Alamat</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Masukkan Alamat"
+              />
+            </div>
+            <div class="form-group">
+              <h3>Layanan</h3>
+              <label for="jenis-pendaftaran">Jenis Pendaftaran</label>
+              <select id="jenis-pendaftaran" name="jenis-pendaftaran">
+                <option value="">Pilih Jenis Pendaftaran</option>
+                <!-- Add options as needed -->
+              </select>
+              <label for="service-date">Tanggal</label>
+              <input
+                type="date"
+                id="service-date"
+                name="service-date"
+                class="date-input"
+              />
+              <label for="jenis-poliklinik">Jenis Poliklinik</label>
+              <select id="jenis-poliklinik" name="jenis-poliklinik">
+                <option value="">Pilih Jenis Poliklinik</option>
+                <!-- Add options as needed -->
+              </select>
+            </div>
+            <div class="button-container">
+              <button type="submit">Simpan</button>
+            </div>
+          </form>
+        </div>
+        <div class="image-section">
+          <img
+            src="/Users/fendhi/Downloads/mature-asian-woman-sitting-doctor-s-office-having-blood-pressure-measured 1.png"
+            alt="Medical Consultation"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
