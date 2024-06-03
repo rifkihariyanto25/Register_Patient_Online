@@ -56,31 +56,6 @@ body {
   color: #333;
 }
 
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-  }
-
-  .header-buttons {
-    justify-content: flex-end;
-    margin-right: 10px;
-  }
-
-  .header-buttons a {
-    margin-left: 5px;
-    padding: 8px 15px;
-  }
-}
-
-/* .login-register i {
-  margin-bottom: 5px; 
-}
-.header .login-register:hover {
-  color: #609ea2;
-} */
-
 #menu {
   display: none;
   margin-top: 45px;
@@ -121,7 +96,7 @@ body {
 .banner {
   margin: 0;
   padding: 0;
-  background-image: url(/Assets/images/Intersect.png);
+  background-image: url("../../Assets/images/Intersect.png");
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -129,13 +104,6 @@ body {
   position: relative;
   margin-bottom: 50px;
 }
-
-/* .banner .waves {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-  } */
 
 .banner-teks1 {
   color: rgba(244.90625202655792, 108.67714762687683, 165.0776731967926, 1);
@@ -165,17 +133,6 @@ body {
   font-weight: 500;
 }
 
-/* .banner-carve:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 500px;
-    left: 0;
-    bottom: 0;
-    background: url(Assets/images/Vector1.svg) 100% 100% no-repeat;
-    background-blend-mode: multiply;
-  } */
-
 .center-text {
   padding: 50px 20px;
   text-align: center;
@@ -198,8 +155,6 @@ body {
   text-align: center;
 }
 
-/* Garis horizontal dan halaman produk kami*/
-/* Garis horizontal dan halaman produk kami */
 .garis-horizontal {
   width: calc(97% - 80px); /* Adjust the value according to your layout */
   margin-top: 100px;
@@ -281,6 +236,52 @@ body {
   color: #c92c6d;
 }
 
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.mobile-menu .mobile-nav {
+  padding: 20px;
+}
+
+.mobile-menu .nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu .nav-links a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-menu .login-button,
+.mobile-menu .signup-button {
+  margin-top: 10px;
+}
+/* Keyframes for slide-in effect */
+@keyframes slideIn {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .kontak .contact-button {
@@ -347,7 +348,37 @@ body {
   text-align: right;
 }
 
+/* Media queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
 @media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  #menu {
+    display: none;
+  }
+  .header-container {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header-buttons {
+    justify-content: flex-end;
+    margin-right: px;
+  }
+
+  .header-buttons a {
+    margin-left: 5px;
+    padding: 8px 15px;
+  }
   .footer-container,
   .footer-bottom {
     flex-direction: column;
@@ -371,43 +402,28 @@ body {
     width: 100%;
   }
 }
-/* Media queries */
 
-/* Laptop */
-@media (max-width: 1366px) {
-  html {
-    font-size: 75%;
-  }
-}
-/* Tablet */
-@media (max-width: 768px) {
-  html {
-    font-size: 55%;
-  }
-  .search-container {
-    display: none;
-  }
-
-  #search-icon {
-    display: inline-block;
-    margin-left: 150px;
-  }
-
-  .login-register {
-    display: none;
-  }
-  #menu {
-    display: inline-block;
-  }
-
-  .dark-mode {
-    display: none;
-  }
-}
-
-/* Mobile */
+/* Mobile Adjustments */
 @media (max-width: 450px) {
+  /* Hide traditional header buttons and nav links */
   html {
     font-size: 45%;
+  }
+
+  .login-button,
+  .signup-button {
+    display: none;
+  }
+
+  /* Show the hamburger menu */
+  .header-buttons #menu {
+    display: block;
+    position: absolute;
+    right: 25px; /* Positioned to the right */
+    top: 20px; /* Positioned at the top */
+  }
+
+  .navbar {
+    display: none;
   }
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSU Bunda - Registrasi</title>
+    <link rel="stylesheet" href="register.css" />
+    <script src="js/register.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="background"></div>
+      <div class="form-container">
+        <div class="logo">
+          <h1>RSU <span>Bunda</span></h1>
+        </div>
+        <form id="register-form">
+          <h2>Isikan data diri anda dengan lengkap!!!</h2>
+          <hr />
+          <input
+            type="text"
+            id="register-name"
+            placeholder="Masukan Nama"
+            required
+          />
+          <input
+            type="email"
+            id="register-email"
+            placeholder="Masukan Email"
+            required
+          />
+          <input
+            type="text"
+            id="register-address"
+            placeholder="Masukan Alamat"
+            required
+          />
+          <select id="register-gender" required>
+            <option value="" disabled selected>Jenis kelamin</option>
+            <option value="male">Laki-laki</option>
+            <option value="female">Perempuan</option>
+          </select>
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

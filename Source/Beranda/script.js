@@ -11,3 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+$(document).ready(function () {
+  $("#menu").on("click", function () {
+    $("#mobileMenu").toggle();
+  });
+});
