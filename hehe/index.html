@@ -16,40 +16,70 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <!-- HEADER START -->
     <div class="header">
-      <a href="#" class="logo">RSU <span>Bunda</span></a>
-      <div class="auth">
-        <a href="#" class="login"><i data-feather="log-in"></i> Log in</a>
-        <button type="button">Sign Up</button>
+      <div class="header-container">
+        <div class="logo">
+          <span>RSU</span> <span class="highlight">Bunda</span>
+        </div>
+        <div class="header-buttons">
+          <a href="#" class="login-button">Log in</a>
+          <a href="#" class="signup-button">Sign Up</a>
+          <a href="#" id="menu"><i data-feather="menu"></i></a>
+        </div>
       </div>
-      <a href="#" id="menu"><i data-feather="menu"></i></a>
     </div>
+
     <!-- HEADER END -->
 
     <!-- NAVBAR START -->
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="index.html">Beranda</a></li>
         <li><a href="#pelayanan">Pelayanan</a></li>
-        <li><a href="#pendaftaran-online">Pendaftaran Online</a></li>
+        <li>
+          <a href="../Pendaftaran/formpendaftaran.html">Pendaftaran Online</a>
+        </li>
+        <li>
+          <a href="../Informasi-page/informasi.html">Informasi Antrian</a>
+        </li>
         <li><a href="#kontak">Kontak</a></li>
       </ul>
     </nav>
     <!-- NAVBAR END -->
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="#pelayanan">Pelayanan</a></li>
+          <li>
+            <a href="../Pendaftaran/formpendaftaran.html">Pendaftaran Online</a>
+          </li>
+          <li>
+            <a href="../Informasi-page/informasi.html">Informasi Antrian</a>
+          </li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+        <a href="#" class="login-button">Log in</a>
+        <a href="#" class="signup-button">Sign Up</a>
+      </div>
+    </div>
     <!-- Banner Image with Wave Effect -->
-    <div id="beranda" class="banner">
-      <div class="overlay-banner">
-        <span class="banner-teks1">RSU Bunda Purwokerto</span>
-        <span class="banner-teks2"
-          >Selalu berusaha memberikan Pelayanan terbaik</span
-        >
+    <div class="banner">
+      <div class="banner-carve">
+        <div class="overlay-banner">
+          <span class="banner-teks1">RSU Bunda Purwokerto</span>
+          <span class="banner-teks2"
+            >Selalu berusaha memberikan Pelayanan terbaik</span
+          >
+        </div>
       </div>
     </div>
 
-    <!-- Mengapa Kami? -->
     <div class="center-text">
       <h1>Mengapa Kami?</h1>
       <div class="info-container">
@@ -80,6 +110,7 @@
     <!-- Pelayanan -->
     <div id="pelayanan" class="pelayanan">
       <h1>Pelayanan</h1>
+      <p>Layanan Poli Klinik Yang Ada Di Rumah Sakit Harapan Bunda</p>
       <div class="services">
         <div class="service">Poli Mata</div>
         <div class="service">Poli Dalam</div>
@@ -92,57 +123,105 @@
       </div>
     </div>
 
-    <!-- Layanan Unggulan -->
+    <!-- Layanan Ungggulan -->
     <div class="layanan-unggulan">
-      <h2>Layanan Unggulan</h2>
-      <div class="unggulan">
-        <div class="unggulan-item">
-          <h3>Medical Check Up</h3>
-          <p>Menyediakan layanan paket pemeriksaan kesehatan berkala...</p>
-        </div>
-        <div class="unggulan-item">
-          <h3>PCNL</h3>
+      <h1>Layanan Unggulan</h1>
+      <div class="services">
+        <div class="service">
+          <h2>#1 Medical Check Up</h2>
           <p>
-            Prosedur pengangkatan batu ginjal yang dilakukan untuk mengangkat
-            batu...
+            Menyediakan layanan paket pemeriksaan kesehatan berkala (Medical
+            Check Up) yang komprehensif dan diukur dengan cakupan oleh dokter
+            dan tenaga medis yang kompeten serta layanan penunjang medis yang
+            lengkap.
           </p>
         </div>
-        <div class="unggulan-item">
-          <h3>Hemodialisa</h3>
+        <div class="service">
+          <h2>#2 PCNL</h2>
           <p>
-            Hemodialisa merupakan salah satu jenis terapi pasien gagal ginjal...
+            PCNL (Percutaneous nephrolithotomy) adalah prosedur pengangkatan
+            batu ginjal yang dilakukan untuk mengangkat batu ginjal yang tidak
+            dapat dijalarukan melalui atau metode ESWL.
           </p>
         </div>
-        <div class="unggulan-item">
-          <h3>Orthopedi Center</h3>
+        <div class="service">
+          <h2>#3 Hemodialisa</h2>
           <p>
-            Melayani pasien dengan masalah pada musculoskeletal yang memengaruhi
-            tulang...
+            Hemodialisa (Cuci Darah) merupakan salah satu jenis terapi pasien
+            gagal ginjal. Hemodialisa digunakan untuk menggantikan sebagian
+            fungsi ginjal, Hemodialisa dapat membuang memorialkan keseimbangan
+            cairan, membunuh sisa metabolisme tubuh, menyelimbangkan unsur
+            elektrolit dalam tubuh, dan membantu mengendalikan tekanan darah.
           </p>
         </div>
-        <div class="unggulan-item">
-          <h3>ESWL</h3>
+        <div class="service">
+          <h2>#4 Orthopedi Center</h2>
           <p>
-            Prosedur memecahkan batu ginjal, baik yang berada di ginjal maupun
-            di ureter...
+            Menyediakan pasien dengan masalah pada musculoskeletal yang
+            mempengaruhi tulang, sendi, otot, tendon, dan ligament. Dengan
+            Dokter Spesialis Orthopedi yang berpengalaman.
+          </p>
+        </div>
+        <div class="service">
+          <h2>#5 ESWL</h2>
+          <p>
+            ESWL (extracorporeal shock wave lithotripsy) adalah prosedur
+            penghancuran batu ginjal, batu yang berada di ginjal maupun di
+            ureter (saluran kemih) tanpa prosedur.
           </p>
         </div>
       </div>
     </div>
 
-    <!-- Footer -->
-    <div id="kontak" class="footer">
-      <h2>Kontak</h2>
+    <!-- Kontak -->
+    <div id="kontak" class="kontak">
       <p>
-        RSU Harapan Bunda selalu berupaya untuk meningkatkan kinerja dan
-        melakukan tinjauan...
+        Ada yang ingin ditanyakan? RSU Harapan Bunda selalu berupaya untuk
+        meningkatkan kinerja dan melakukan tinjauan dan monitoring setiap aspek
+        pelayanannya
       </p>
-      <button>Hubungi Kami</button>
+      <a href="#" class="contact-button">Hubungi Kami</a>
     </div>
 
+    <div class="footer-main">
+      <div class="footer-left">
+        <h2>RSU Bunda</h2>
+        <p>Pelayanan Rumah Sakit terbaik</p>
+      </div>
+      <div class="footer-right">
+        <h3>Tautan</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Layanan</a></li>
+          <li><a href="#">Layanan Unggulan</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Program</a></li>
+          <li><a href="#">Jadwal</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="social-media">
+        <a href="#"><img src="path/to/facebook-icon.png" alt="Facebook" /></a>
+        <a href="#"><img src="path/to/instagram-icon.png" alt="Instagram" /></a>
+        <a href="#"><img src="path/to/twitter-icon.png" alt="Twitter" /></a>
+        <a href="#"><img src="path/to/youtube-icon.png" alt="YouTube" /></a>
+      </div>
+      <p>© RSUBunda.com 2024 – 2028</p>
+    </div>
+    <!-- Feather ICONS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
     <script>
       feather.replace();
+
+      $(document).ready(function () {
+        $("#menu").click(function () {
+          $("#mobile-menu").toggleClass("open");
+        });
+      });
     </script>
   </body>
 </html>

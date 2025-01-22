@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", "sans-serif";
+  box-sizing: border-box;
+}
 body {
   font-family: "Poppins", sans-serif;
   margin: 0%;
@@ -92,6 +100,105 @@ body {
   background-color: #315759;
   color: #fff;
 }
+
+.navbar ul li a.active {
+  background-color: #315759;
+  color: #fff;
+}
+/* Add these styles to your CSS file */
+
+/* Initial state of the mobile menu (hidden) */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #609ea2;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  transform: translateX(100%); /* Start hidden off-screen */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Visible state of the mobile menu */
+.mobile-menu.open {
+  display: block;
+  transform: translateX(0); /* Slide in from the right */
+}
+
+.mobile-menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.mobile-menu a:hover {
+  text-decoration: underline;
+}
+
+#menu {
+  cursor: pointer;
+  font-size: 24px;
+  color: #000;
+}
+#close-menu {
+  cursor: pointer;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+#close-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 450px) {
+  /* Hide traditional header buttons and nav links */
+  .logo {
+    font-size: 26px; /* Adjusted font size for smaller screens */
+    margin-left: 25px; /* Adjust left margin if needed */
+  }
+
+  .header-buttons .login-button,
+  .header-buttons .signup-button {
+    display: none !important;
+  }
+
+  /* Show the hamburger menu */
+  .header-buttons #menu {
+    display: block;
+    position: absolute;
+    right: 25px; /* Positioned to the right */
+    top: -15px; /* Positioned at the top */
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .header-buttons .login-button,
+  .header-buttons .signup-button {
+    display: none !important;
+  }
+
+  /* Show the hamburger menu */
+  .header-buttons #menu {
+    display: block;
+    position: absolute;
+    right: 25px; /* Positioned to the right */
+    top: -15px; /* Positioned at the top */
+  }
+
+  .navbar {
+    display: none;
+  }
+}
+
 /* Gambar dengan efek gelombang */
 .banner {
   margin: 0;
@@ -106,31 +213,72 @@ body {
 }
 
 .banner-teks1 {
-  color: rgba(244.90625202655792, 108.67714762687683, 165.0776731967926, 1);
-  width: 772px;
-  height: 68px;
+  color: rgba(244, 108, 165, 1);
+  width: 100%;
+  height: auto;
   position: absolute;
-  left: 46px;
-  top: 150px;
+  left: 16px;
+  top: 120px;
   font-family: "Poppins", sans-serif;
   text-align: left;
-  font-size: 45px;
+  font-size: 28px;
   letter-spacing: 0;
   font-weight: 500;
 }
 
 .banner-teks2 {
-  color: rgba(240.00000089406967, 238.00000101327896, 237.0000010728836, 1);
-  width: 792px;
-  height: 68px;
+  color: rgba(240, 238, 237, 1);
+  width: 100%;
+  height: auto;
   position: absolute;
-  left: 48px;
-  top: 220px;
+  left: 16px;
+  top: 180px;
   font-family: "Poppins", sans-serif;
   text-align: left;
-  font-size: 36px;
+  font-size: 20px;
   letter-spacing: 0;
   font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: 500px;
+  }
+  .banner-teks1 {
+    font-size: 45px;
+    left: 46px;
+    top: 150px;
+    width: 772px;
+    height: 68px;
+  }
+
+  .banner-teks2 {
+    font-size: 36px;
+    left: 48px;
+    top: 220px;
+    width: 792px;
+    height: 68px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 200px;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .banner-teks1 {
+    font-size: 22px;
+    left: 12px;
+    top: 50px;
+  }
+
+  .banner-teks2 {
+    font-size: 16px;
+    left: 12px;
+    top: 80px;
+  }
 }
 
 .center-text {
@@ -200,13 +348,134 @@ body {
   color: white;
   padding: 20px;
   text-align: center;
+  position: relative;
+}
+
+.layanan-unggulan h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.layanan-unggulan h1::before,
+.layanan-unggulan h1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 2px;
+  background-color: #d63a72;
+}
+
+.layanan-unggulan h1::before {
+  left: -70px;
+}
+
+.layanan-unggulan h1::after {
+  right: -70px;
 }
 
 .layanan-unggulan .services {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
   padding: 20px;
+}
+
+.layanan-unggulan .service {
+  background: #442e49;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.layanan-unggulan .service-number {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: #d63a72;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.layanan-unggulan .service h2 {
+  font-size: 20px;
+  color: #d63a72;
+  margin-bottom: 15px;
+}
+
+.layanan-unggulan .service p {
+  font-size: 14px;
+  color: #d1d1d1;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .layanan-unggulan .services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .layanan-unggulan h1::before,
+  .layanan-unggulan h1::after {
+    width: 40px;
+  }
+
+  .layanan-unggulan h1::before {
+    left: -50px;
+  }
+
+  .layanan-unggulan h1::after {
+    right: -50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .layanan-unggulan .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .layanan-unggulan h1 {
+    font-size: 20px;
+  }
+  .layanan-unggulan h1::before,
+  .layanan-unggulan h1::after {
+    width: 30px;
+  }
+
+  .layanan-unggulan h1::before {
+    left: -35px;
+  }
+
+  .layanan-unggulan h1::after {
+    right: -35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .layanan-unggulan h1 {
+    font-size: 20px;
+  }
+  .layanan-unggulan .services {
+    grid-template-columns: 1fr;
+  }
+
+  .layanan-unggulan h1::before,
+  .layanan-unggulan h1::after {
+    width: 20px;
+  }
+
+  .layanan-unggulan h1::before {
+    left: -25px;
+  }
+
+  .layanan-unggulan h1::after {
+    right: -25px;
+  }
 }
 
 /* Kontak */
@@ -236,59 +505,6 @@ body {
   color: #c92c6d;
 }
 
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 1000;
-}
-
-.mobile-menu .mobile-nav {
-  padding: 20px;
-}
-
-.mobile-menu .nav-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mobile-menu .nav-links a {
-  text-decoration: none;
-  color: #333;
-  padding: 10px 20px;
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
-.mobile-menu .login-button,
-.mobile-menu .signup-button {
-  margin-top: 10px;
-}
-/* Keyframes for slide-in effect */
-@keyframes slideIn {
-  from {
-    right: -100%;
-  }
-  to {
-    right: 0;
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .kontak .contact-button {
-    padding: 5px 10px;
-    font-size: 10px;
-  }
-}
 /* Footer */
 .footer-main {
   display: flex;
@@ -312,7 +528,7 @@ body {
   margin-left: 45px;
 }
 .footer-right {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .footer-right ul {
   list-style: none;
@@ -372,7 +588,7 @@ body {
 
   .header-buttons {
     justify-content: flex-end;
-    margin-right: px;
+    margin-right: 15px;
   }
 
   .header-buttons a {
@@ -407,12 +623,16 @@ body {
 @media (max-width: 450px) {
   /* Hide traditional header buttons and nav links */
   html {
-    font-size: 45%;
+    font-size: 35%;
   }
 
-  .login-button,
-  .signup-button {
-    display: none;
+  .logo {
+    font-size: 26px; /* Adjusted font size for smaller screens */
+    margin-left: 25px; /* Adjust left margin if needed */
+  }
+  .header-buttons .login-button,
+  .header-buttons .signup-button {
+    display: none !important;
   }
 
   /* Show the hamburger menu */
@@ -420,7 +640,7 @@ body {
     display: block;
     position: absolute;
     right: 25px; /* Positioned to the right */
-    top: 20px; /* Positioned at the top */
+    top: -15px; /* Positioned at the top */
   }
 
   .navbar {
