@@ -53,7 +53,7 @@
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/Zakvsl/RS-Bunda-Website.git
+   git clone https://github.com/rifkihariyanto25/Register_Patient_Online.git
    ```
 
 2. **Buka Project**
@@ -69,6 +69,7 @@
 
 - **UI/UX Designer:** [Muhamad Dimas Nurzaky]
 - **Frontend Developer:** [Muhamad Dimas Nurzaky]
+- **Backend Developer:** [Rifki Aditya Hariyanto]
 
 
 ## 📈 Status Proyek
